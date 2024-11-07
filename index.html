@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocaruru - Historia</title>
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="shortcut icon" href="emparedado.png" type="image/x-icon">
+</head>
+<body>
+    
+    <nav class="sidebar">
+        <img class="logo" src="img/Logo_bocarurus.png" alt="Logo">
+        <h2>Bocaruru</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bocadillos.php">Bocadillos</a></li>
+            <li><a href="./contacto/contacto.html">Contacto</a></li>
+        </ul>
+    
+    </nav>
+    
+    <div class="cabecera" >
+        <img class="img-cabecera" src="img/barra-encabezado.jpg" alt="barra-encabezado">
+        <h1 class="titulo-cabecera">Bocadillos con historia</h1>
+    </div>
+    
+    <div class="main-content">
+
+        <section id="historia" class="flex-content">
+            <div class="div-historia">
+                <div class="titulos">
+            <h1>Historia de Bocaruru</h1>
+            <h3>Desde 1994 haciendo bocadillos especiales</h3>
+        </div>
+            <p>Bocaruru nació de un sueño: crear un lugar donde las personas pudieran disfrutar de bocadillos frescos, únicos y llenos de sabor, en un ambiente acogedor y familiar. La historia comenzó en el año 1994, cuando dos amigos de la infancia, apasionados por la comida y las recetas tradicionales, decidieron dar un paso valiente y abrir su primera bocatería en un pequeño local en el centro de la ciudad.</p>
+
+            <p class="texto-oculto">Desde el primer día, nuestro objetivo fue claro: ofrecer bocadillos con ingredientes de la mejor calidad, con recetas que combinaran lo clásico con toques modernos y creativos. Inspirados por los sabores de la cocina casera y con la premisa de que "lo simple también puede ser increíble", nos propusimos elaborar bocadillos que no solo satisficieran el hambre, sino que brindaran una experiencia culinaria auténtica y memorable.</p>
+        </div>
+            <img src="img/foto historia.jpg" alt="historia" class="img-principal">
+            
+        </section>
+
+        <section id="bocadillos" class="flex-content primero">
+           
+            <div class="carrusel">
+                <div class="slides">
+                    <img src="img/Flamenquin-Aliatar.jpg" alt="Bocadillo 1" class="slide img-principal">
+                    <img src="img-bocadillos/Bocadillo-tortilla-Aliatar.jpg" alt="Bocadillo 2" class="slide img-principal">
+                    <img src="img-bocadillos/Montijano-Aliatar.jpg" alt="Bocadillo 3" class="slide img-principal">
+                    <img src="img-bocadillos/Nivero-Aliatar.jpg" alt="Bocadillo 4" class="slide img-principal">
+                </div>
+            </div>
+            <div class="div-historia">
+                <div class="titulos">
+            <h1>Nuestros Bocadillos</h1>
+            <h3>Nuestra especialidad</h3>
+        </div >
+            <p>Los bocadillos de Bocaruru son mucho más que simples combinaciones de ingredientes entre dos panes. Cada uno de ellos es el resultado de años de pasión, pruebas y perfeccionamiento, con el objetivo de ofrecer una experiencia que deleite a nuestros clientes en cada bocado. Desde el primer bocadillo que salió de nuestra cocina, nuestro compromiso ha sido crear algo especial, algo que destaque no solo por su sabor, sino por la calidad de los ingredientes y el amor con el que son preparados.</p>
+            <p class="texto-oculto">En Bocaruru, cada bocadillo es una obra maestra de sabor, diseñada para sorprender y satisfacer los paladares más exigentes. Nos enorgullecemos de utilizar ingredientes frescos y locales, cuidadosamente seleccionados para garantizar que cada bocado sea una explosión de sabores auténticos.</p>
+            <div class="contenedor-boton">
+            <a href="bocadillos.php" class="boton">Nuestra Carta</a>
+        </div>
+        </div>
+        </section>
+        
+
+        <section id="ubicacion" class="ubicacion">
+            <div class="titulos">
+            <h1>¿Dónde estamos?</h1>
+        </div>
+            <p>Nos ubicamos en el corazón de la ciudad, en la calle Recogidas número 12. Ven y visítanos, ¡te esperamos!</p>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.9072270748916!2d-3.6055971236076005!3d37.171698846669486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fc966a7c6a75%3A0x27e9f13d349f4d40!2sC.%20Recogidas%2C%20Granada%2C%20Espa%C3%B1a!5e1!3m2!1ses-419!2smx!4v1728470196753!5m2!1ses-419!2smx" 
+        width="100%" height="450" style="border:0; max-width: 1000px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+        </section>
+    </div>
+    <footer>
+        <p>Copyright © 2024 Bocarurus</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Botón hamburguesa -->
+<div class="nav-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<script>
+function toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active');
+}
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll('.slide');
+    
+    // Restaura el índice si llega al final
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    
+    // Mueve el contenedor de slides para mostrar la imagen actual
+    document.querySelector('.slides').style.transform = `translateX(${-slideIndex * 100}%)`;
+    
+    // Aumenta el índice para la siguiente imagen
+    slideIndex++;
+}
+
+// Llama a showSlides inicialmente y luego establece el intervalo de 3 segundos
+showSlides();
+setInterval(showSlides, 3000); // Cambia 3000 a la cantidad de milisegundos que desees
+
+
+</script>
+</body>
+</html>

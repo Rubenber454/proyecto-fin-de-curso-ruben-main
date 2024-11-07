@@ -1,0 +1,241 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Asegurar que el ancho del input incluya padding y borde */
+input[type="text"], textarea, input[type="password"] {
+    width: 100%; /* El input ocupará todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Para incluir el padding dentro del ancho */
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="password"]:focus {
+    border-color: #5cb85c;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 10px;
+}
+
+
+/* Tabla de Productos */
+.table-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+table th {
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Botones de Acción */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button.edit-btn, button.delete-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.edit-btn {
+    background-color: #0275d8;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+button.edit-btn:hover {
+    background-color: #025aa5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+button.delete-btn {
+    background-color: #d9534f;
+    box-shadow: 0 2px 4px rgba(217, 83, 79, 0.2);
+}
+
+button.delete-btn:hover {
+    background-color: #c9302c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(217, 83, 79, 0.3);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.sidebar ul li a.active {
+    background-color: #5cb85c;
+}
+
+.sidebar-footer {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Contenido Principal */
+.main-content {
+    margin-left: 270px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.main-content h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Botón de Añadir Producto */
+.add-product-btn {
+    background-color: #5bc0de;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.add-product-btn:hover {
+    background-color: #31b0d5;
+}
+

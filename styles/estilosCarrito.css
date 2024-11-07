@@ -1,0 +1,322 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#d6b773, #f0a500);
+}
+
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+/* Barra lateral de navegación */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    z-index: 100;
+    transition: 0.3s;
+    overflow-y: auto;
+}
+
+
+/* Menú hamburguesa */
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 200; /* Asegura que esté siempre por encima */
+}
+.nav-toggle span {
+    display: none;
+    width: 30px;
+    height: 4px;
+    margin: 6px;
+    background-color: white;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    color: #f0a500;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    background-color: #fff3e0;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos de la tabla del carrito */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #f0a500;
+}
+
+table th {
+    background-color: #f0a500;
+    color: white;
+}
+
+table td {
+    background-color: #fff;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilos de botones */
+button {
+    padding: 10px 20px;
+    background-color: #f0a500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d48c00;
+}
+
+/* Estilos del total */
+h3 {
+    text-align: right;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo del carrito vacío */
+p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+/* Estilos del formulario de pago */
+#payment-form-card, #payment-form-cash, #payment-form-paypal {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#payment-form-card div,
+#payment-form-cash div,
+#payment-form-paypal div {
+    margin-bottom: 15px;
+}
+
+#payment-form-card label,
+#payment-form-cash label,
+#payment-form-paypal label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#payment-form-card input[type="text"],
+#payment-form-cash input[type="text"],
+#payment-form-paypal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#payment-form-card button,
+#payment-form-paypal input[type="submit"] {
+    padding: 12px 25px;
+    background-color: #f0a500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}
+
+#payment-form-card button:hover,
+#payment-form-paypal input[type="submit"]:hover {
+    background-color: #d48c00;
+}
+
+/* Estilo del desplegable */
+#payment-methods {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+/* Media Queries para responsividad */
+
+/* Para pantallas de 1440px */
+@media (max-width: 1440px) {
+    .sidebar {
+        width: 220px;
+    }
+    
+    
+    .main-content {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Para pantallas de 1024px */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+    
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Ajuste para pantalla pequeña */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-toggle span{
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 250px;
+        left: -250px; /* Oculta la barra lateral fuera de la pantalla */
+        top: 0;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0; /* La barra lateral cubrirá la pantalla en modo activo */
+    }
+
+    /* Asegura que el menú hamburguesa esté visible */
+    .nav-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 300; /* Por encima de todo */
+    }
+    .main-content {
+        margin-left: 0; /* El contenido ocupa toda la pantalla */
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+/* Para pantallas de 425px */
+@media (max-width: 425px) {
+    .sidebar h2 {
+        font-size: 20px;
+    }
+    
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Para pantallas de 375px */
+@media (max-width: 375px) {
+    .sidebar h2 {
+        font-size: 18px;
+    }
+    
+    .sidebar ul li a {
+        font-size: 13px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
+}
+
+/* Para pantallas de 320px */
+@media (max-width: 320px) {
+    .sidebar h2 {
+        font-size: 16px;
+    }
+    
+    .sidebar ul li a {
+        font-size: 12px;
+    }
+    
+    h1 {
+        font-size: 16px;
+    }
+}
+

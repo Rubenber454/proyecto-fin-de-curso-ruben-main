@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient( #d6b773,#f0a500  ) ;
+    
+}
+
+/* Barra lateral de navegación */
+.logo{
+    width: 200px;
+    height: 200px;
+}
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    z-index: 10;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    color: #f0a500;
+}
+
+/* Menú hamburguesa */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px;
+    background-color: white;
+}
+
+/* Contenido principal */
+.img-cabecera {
+    width: 100%;
+    height: 100vh; /* Asegura que la imagen mantenga proporción */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cabecera {
+    position: relative; /* Para posicionar el h1 dentro de la cabecera */
+    text-align: center; /* Centrar el contenido dentro de la cabecera */
+    width: calc(100% - 250px); /* Si tu nav tiene 250px de ancho, ajusta este valor */
+    margin-left: 250px; /* Para compensar el ancho del nav */
+}
+
+.cabecera::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Filtro oscuro sobre la imagen */
+    z-index: 1; /* Asegura que esté debajo del texto */
+}
+
+/* Texto centrado */
+.titulo-cabecera {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Para centrar el texto */
+    color: white;
+    font-size: 2.5rem;
+    z-index: 2; /* Asegura que esté encima del filtro oscuro */
+}
+
+.titulo-cabecera{
+    position: absolute;
+    z-index: 1;
+    font-size: 5rem;
+    color: white;
+}
+.flex-content{
+    display: flex;
+    justify-content: left;
+}
+
+.div-historia{
+    width: 50%;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+.div-historia p{
+    margin: 2rem;
+    line-height: 2rem;
+}
+.titulos{
+    text-align: center;
+}
+.img-principal{
+    width: 50%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: calc(100% - 260px);
+}
+.carrusel {
+    position: relative;
+    width: 50%;
+    max-height: 600px;
+    overflow: hidden;
+    
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+h1 {
+    font-size: 28px;
+    margin: 20px;
+    text-align: center;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0a500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 20px;
+    
+}
+.contenedor-boton {
+    text-align: center; 
+}
+
+.boton:hover {
+    background-color: #d48c00;
+}
+
+#ubicacion h1,
+#ubicacion p {
+    text-align: center;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+footer{
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 1672px){
+    /* Asegura que el menú hamburguesa esté visible */
+    .nav-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 300; /* Por encima de todo */
+    }
+
+
+    .cabecera {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .flex-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .primero{
+        flex-direction: column-reverse;
+    }
+
+    .img-principal,
+    .div-historia {
+        width: 100%;
+    }
+}
+
+
+/* Responsivo para pantallas grandes (1440px o más) */
+@media (max-width: 1440px) {
+    .sidebar{
+        font-size: 2rem;
+    }
+    .sidebar ul li a{
+        font-size: 1.5rem;
+    }
+    .cabecera {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+        
+    }
+    .titulo-cabecera{
+        font-size: 5rem;
+    }
+    .titulos h1{
+        font-size: 3rem;
+    }
+    .div-historia{
+        padding: 5rem;
+        max-width: 1200px;
+        font-size: 1.5rem;
+
+    }
+    .img-principal{
+        max-width: 1200px;
+    }
+    .boton{
+        font-size: 30px;
+    }
+    .ubicacion{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    footer{
+        font-size: 1.5rem;
+    }
+    .img-principal {
+        height: 700px;
+    }
+    
+}
+
+/* Responsivo para pantallas de 1024px */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+        font-size: 1.5rem;
+    }
+
+    .cabecera {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .img-principal {
+        height: 400px;
+    }
+    .div-historia{
+        padding: 5rem;
+        max-width: 1200px;
+        font-size: 1.5rem;
+
+    }
+    
+   
+    
+}
+
+/* Responsivo para pantallas de 768px */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 250px;
+        left: -250px; /* Oculta la barra lateral fuera de la pantalla */
+        top: 0;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0; /* La barra lateral cubrirá la pantalla en modo activo */
+    }
+
+    /* Asegura que el menú hamburguesa esté visible */
+    .nav-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 300; /* Por encima de todo */
+    }
+
+
+    .cabecera {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-content{
+        display: inline;
+    }
+    .texto-oculto{
+        display: none;
+    }
+    .flex-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .primero{
+        flex-direction: column-reverse;
+    }
+
+    .img-principal,
+    .div-historia {
+        width: 100%;
+    }
+}
+
+/* Responsivo para pantallas de 425px */
+@media (max-width: 425px) {
+    .titulo-cabecera {
+        font-size: 3rem;
+    }
+
+    .img-principal {
+        height: 300px;
+    }
+    .div-historia{
+        font-size: 1.2rem;
+    }
+    .ubicacion{
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsivo para pantallas de 375px */
+@media (max-width: 375px) {
+    .boton {
+        font-size: 16px;
+    }
+
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Responsivo para pantallas de 320px */
+@media (max-width: 320px) {
+    .titulo-cabecera {
+        font-size: 1.4rem;
+    }
+
+    .boton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+}
+
+.bocadillos-container {
+    display: flex; /* Usamos flexbox para alinear bocadillos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
+    justify-content: center; /* Centra los bocadillos */
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+.bocadillo {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    width: 300px; /* Ancho de las imágenes */
+    overflow: hidden; /* Para evitar que el contenido salga de los bordes */
+}
+
+.bocadillo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Contenedor del texto inicialmente oculto */
+.texto-superpuesto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Ocultar al inicio */
+    transition: opacity 0.5s ease; /* Transición suave de aparición */
+    
+    text-align: center;
+    padding: 10px;
+    flex-direction: column; /* Alinear texto verticalmente */
+}
+
+/* Texto individual */
+.nombre {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 18px;
+    color: yellow;
+}
+
+/* Mostrar el texto y aplicar un efecto zoom a la imagen al hacer hover */
+.bocadillo:hover .texto-superpuesto {
+    opacity: 1; /* Aparece el texto y fondo oscuro */
+}
+
+.bocadillo:hover img {
+    transform: scale(1.1); /* Zoom suave en la imagen */
+}
+
+/* Estilo del carrito flotante */
+.carrito-flotante {
+    position: fixed; /* Permanece visible todo el tiempo */
+    
+    right: 20px;
+    width: 220px;
+    height: auto;
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100; /* Encima de otros elementos */
+    cursor: grab; /* Indicador de que se puede arrastrar */
+    font-family: Arial, sans-serif; /* Mantener consistencia con el estilo de texto */
+}
+
+.carrito-flotante h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #f0a500; /* Usar el color amarillo del tema */
+}
+
+.carrito-flotante p {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+
+.carrito-flotante .total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    color: yellow; /* Color amarillo para el total */
+}
+
+.carrito-flotante .ver-carrito {
+    display: block;
+    text-align: center;
+    background-color: #f0a500; /* Color del tema */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.carrito-flotante .ver-carrito:hover {
+    background-color: #d48c00; /* Cambio de color al hacer hover */
+}
+
+/* Transición suave cuando se mueve el carrito */
+.carrito-flotante.moving {
+    opacity: 0.8; /* Reduce la opacidad al arrastrar */
+    cursor: grabbing;
+}
+
+
+
