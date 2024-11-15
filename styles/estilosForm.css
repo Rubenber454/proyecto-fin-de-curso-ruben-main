@@ -137,7 +137,8 @@ button[type="submit"]:hover {
 
 /* Responsivo para pantallas grandes (1440px o más) */
 @media (min-width: 1440px) {
-    .sidebar {
+    
+    .sidebar ul li a {
         font-size: 1.5rem;
     }
 

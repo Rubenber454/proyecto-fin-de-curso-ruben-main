@@ -67,7 +67,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="bocadillos.php">Bocadillos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="contacto/contacto.html">Contacto</a></li>
         </ul>
     </div>
     

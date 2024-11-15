@@ -59,7 +59,7 @@ $result = $conn->query($sql);
         <div class="table-container">
             <table border="1">
                 <tr>
-                    <th>ID</th>
+                    
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Precio</th>
@@ -69,7 +69,7 @@ $result = $conn->query($sql);
                 <?php if ($result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
+                        
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['descripcion']; ?></td>
                         <td><?php echo number_format($row['precio'], 2); ?>€</td>
@@ -94,6 +94,19 @@ $result = $conn->query($sql);
     </div>
 
     <?php $conn->close(); ?>
+        <!-- Botón hamburguesa -->
+<div class="nav-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<script>
+function toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active');
+}
+    </script>
 </body>
 </html>
 

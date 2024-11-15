@@ -189,6 +189,7 @@ $conn->close();
         <input type="file" id="imagen" name="imagen" required>
 
         <button type="submit" name="submit">Añadir Producto</button>
+        <a href="admin.php" class="volver" >Atrás</a>
         
     </form>
 

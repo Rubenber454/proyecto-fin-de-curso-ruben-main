@@ -241,7 +241,7 @@ footer{
 /* Responsivo para pantallas grandes (1440px o más) */
 @media (max-width: 1440px) {
     .sidebar{
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .sidebar ul li a{
         font-size: 1.5rem;
@@ -267,7 +267,8 @@ footer{
         max-width: 1200px;
     }
     .boton{
-        font-size: 30px;
+        font-size: 25px;
+        padding: 10px;
     }
     .ubicacion{
         font-size: 1.5rem;

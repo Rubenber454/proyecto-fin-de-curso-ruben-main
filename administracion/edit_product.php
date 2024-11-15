@@ -235,7 +235,7 @@ if (isset($_POST['submit'])) {
         <input type="file" id="imagen" name="imagen">
 
         <button type="submit" name="submit">Actualizar Producto</button>
-        <button type="button" onclick="window.location.href='phpAdmin.php'">Atrás</button>
+        <a href="admin.php" class="volver" >Atrás</a>
     </form>
 
 </body>
