@@ -1,4 +1,5 @@
 <?php
+require_once "../config/config.php";
 session_start();
 
 // Verificar si el usuario ha iniciado sesión
@@ -6,11 +7,6 @@ if (!isset($_SESSION['admin_logged_in'])) {
     header("Location: login.php");
     exit();
 }
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bocarurus";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);

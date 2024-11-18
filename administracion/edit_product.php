@@ -1,12 +1,8 @@
 <?php
+require_once "../config/config.php";
 // Iniciar sesión
 session_start();
 
-// Configuración de la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bocarurus";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);

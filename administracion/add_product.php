@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/../config/config.php';
+include_once '../config/config.php';
 session_start();
 
 $conn = new mysqli($servername, $username, $password, $dbname);
