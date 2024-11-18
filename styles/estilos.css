@@ -208,6 +208,12 @@ footer{
     text-align: center;
 }
 
+.icono{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    color: white;
+}
+
 @media (max-width: 1672px){
     /* Asegura que el menú hamburguesa esté visible */
     .nav-toggle {
@@ -233,6 +239,9 @@ footer{
 
     .img-principal,
     .div-historia {
+        width: 100%;
+    }
+    .carrusel{
         width: 100%;
     }
 }
